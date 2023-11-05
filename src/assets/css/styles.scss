@@ -1,0 +1,104 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    @apply text-bodyText;
+    overflow-x: hidden;
+}
+
+* {
+    @apply transition-all;
+}
+
+.btn {
+    @apply px-3 py-2 my-4 rounded-lg;
+
+    &:hover,
+    &.active {
+        filter: saturate(0.95);
+    }
+}
+
+.btn-gradient-primary {
+    background: var(--primary-liner, linear-gradient(to top, #0c96c0 0%, #38b7ab 100%));
+    box-shadow: 0px 4px 16px 0px rgba(47, 72, 88, 0.33);
+    @apply hover:contrast-[1.5];
+}
+
+.container {
+    @apply sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] mx-auto px-5 min-[1400px]:max-w-[1320px] max-w-7xl;
+}
+
+
+@keyframes zoomin-out {
+  0%   {transform: scale(.9); opacity: 0.4;} 
+  100% {transform: scale(1); opacity: 1;}
+} 
+@keyframes moveup-down {
+  0%   {transform: translateY(-20px) ; } 
+  100% {transform: translateY(0) }
+} 
+/*---- Start home Pages ----*/
+/*header*/
+.site-header {
+    @apply py-14 bg-[url("../images/top-banner.png")] bg-[length:100%_100%] bg-left bg-no-repeat;
+
+    .header-vector {
+        @apply lg:my-10 mt-7 mb-0 relative after:content-[''] after:absolute after:bg-[url(../images/circle-before-vector.png)] after:bg-contain after:bg-no-repeat md:after:-left-8 after:-left-3 after:top-0 after:w-full after:h-60 after:z-0;
+        &:after{
+            animation: zoomin-out 1.5s linear 1.5s infinite alternate;
+        }
+    }
+}
+.sec-demo{
+    .demo-vector{
+        animation: moveup-down 1.5s linear 1.5s infinite alternate;
+    }
+}
+.sec-features {
+    background: var(--primary-liner, linear-gradient(to right, #0c96c0 0%, #38b7ab 100%));
+
+    .service-one__icon {
+        @apply bg-white rounded-full p-3 flex content-center items-center mx-auto max-w-fit my-4;
+
+        >img {
+            @apply h-16;
+        }
+    }
+}
+
+.sec-meet-workwiz-ai {
+    background: url("../images/Dozen-GraphicElement-Wave-01.png") no-repeat left -25px top 80%, var(--primary-liner, linear-gradient(to bottom, #192b57 0%, #008bc3 100%));
+.screens-vector{
+    animation: moveup-down 1.5s linear 1.5s infinite alternate;
+
+}
+}
+
+.sec-services {
+    @apply bg-lightgray;
+
+    .service-one__icon {
+        @apply p-3 flex content-center items-center mx-auto max-w-fit md:my-4;
+
+        >img {
+            @apply md:h-24 h-16;
+        }
+    }
+}
+
+.sec-request-demo {
+    @apply bg-[#1c2850] bg-[url(../images/botgpt.png)] bg-no-repeat md:bg-[left_20%_bottom] bg-[center_bottom]  bg-blend-soft-light;
+
+    .request-demo-lnk {
+        @apply  relative after:content-[''] after:absolute after:bg-[url(../images/circle-before-vector.png)] after:bg-contain after:bg-center after:bg-no-repeat lg:after:-top-32 after:-top-16 after:w-full lg:after:h-80 after:h-48 after:z-0;
+        &:after{
+            animation: zoomin-out 1.5s linear 1.5s infinite alternate;
+        }
+    }
+}
+
+/*---- End home Pages ----*/
