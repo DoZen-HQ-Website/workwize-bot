@@ -5,8 +5,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    @apply text-bodyText;
-    overflow-x: hidden;
+    @apply text-bodyText overflow-x-clip;
+    
 }
 
 * {
@@ -49,16 +49,17 @@ body {
     .header-vector {
         @apply lg:my-10 mt-7 mb-0 relative after:content-[''] after:absolute after:bg-[url(../images/circle-before-vector.png)] after:bg-contain after:bg-no-repeat md:after:-left-8 after:-left-3 after:top-0 after:w-full after:h-60 after:z-0;
         &:after{
-            animation: zoomin-out 1.5s linear 1.5s infinite alternate;
+           /* animation: zoomin-out 1.5s linear 1.5s infinite alternate;*/
         }
     }
 }
 .sec-demo{
     .demo-vector{
-        animation: moveup-down 1.5s linear 1.5s infinite alternate;
+        /*animation: moveup-down 1.5s linear 1.5s infinite alternate;*/
     }
 }
-.sec-features {
+.sec-features,
+.sec-wize-features {
     background: var(--primary-liner, linear-gradient(to right, #0c96c0 0%, #38b7ab 100%));
 
     .service-one__icon {
@@ -70,10 +71,21 @@ body {
     }
 }
 
+.sec-wize-features {
+ 
+    .service-one__icon {
+        @apply bg-transparent rounded-none;
+
+        >img {
+            @apply lg:h-80 h-48;
+        }
+    }
+}
+
 .sec-meet-workwiz-ai {
     background: url("../images/Dozen-GraphicElement-Wave-01.png") no-repeat left -25px top 80%, var(--primary-liner, linear-gradient(to bottom, #192b57 0%, #008bc3 100%));
 .screens-vector{
-    animation: moveup-down 1.5s linear 1.5s infinite alternate;
+   /* animation: moveup-down 1.5s linear 1.5s infinite alternate;*/
 
 }
 }
