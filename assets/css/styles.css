@@ -669,8 +669,8 @@ video {
   margin-bottom: auto;
 }
 
-.-mr-12{
-  margin-right: -3rem;
+.-mr-14{
+  margin-right: -3.5rem;
 }
 
 .mb-0{
@@ -808,6 +808,10 @@ video {
 
 .max-w-lg{
   max-width: 32rem;
+}
+
+.max-w-xl{
+  max-width: 36rem;
 }
 
 .transform{
@@ -966,6 +970,10 @@ video {
 
 .pt-0{
   padding-top: 0px;
+}
+
+.pt-20{
+  padding-top: 5rem;
 }
 
 .pt-3{
@@ -1290,11 +1298,11 @@ body {
   }
   .service-one__icon {
     >img{
-      height: 12rem;
+      height: 6rem;
     }
     @media (min-width: 1024px){
       >img{
-        height: 20rem;
+        height: 12rem;
       }
     }
   }
@@ -1566,6 +1574,15 @@ body {
     padding-bottom: 1.25rem;
   }
 
+  .md\:py-8{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .md\:pt-28{
+    padding-top: 7rem;
+  }
+
   .md\:pt-3{
     padding-top: 0.75rem;
   }
@@ -1630,6 +1647,10 @@ body {
 
   .lg\:top-12{
     top: 3rem;
+  }
+
+  .lg\:top-3{
+    top: 0.75rem;
   }
 
   .lg\:order-2{
@@ -1702,6 +1723,11 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .lg\:py-14{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
   .lg\:py-16{
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -1744,8 +1770,16 @@ body {
     padding-bottom: 7rem;
   }
 
+  .xl\:pb-24{
+    padding-bottom: 6rem;
+  }
+
   .xl\:pb-28{
     padding-bottom: 7rem;
+  }
+
+  .xl\:pt-36{
+    padding-top: 9rem;
   }
 
   .xl\:pt-60{
